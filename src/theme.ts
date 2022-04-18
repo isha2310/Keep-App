@@ -1,5 +1,14 @@
 import { DefaultTheme } from 'styled-components';
 
+const sizes = {
+    borderWidth: '2px',
+    borderRadius: '8px',
+};
+
+const media = {
+    mobile: '768px',
+};
+
 export const lightTheme: DefaultTheme = {
     colors: {
         bg: 'white',
@@ -7,34 +16,24 @@ export const lightTheme: DefaultTheme = {
         accent: '#626262',
         border: '#efefef',
         focus: '#484848',
-        shadow: '#414549',
-        activeButton: '#eddeff'
+        shadow: '#41454959',
+        activeButton: '#eddeff',
     },
     contrast: '1',
-    sizes: {
-        borderWidth: '2px',
-        borderRadius: '8px'
-    },
-    media: {
-        mobile: '768px',
-    }
-}
+    sizes,
+    media,
+};
 export const darkTheme: DefaultTheme = {
     colors: {
-        bg: "#202124",
-        fontColor: '#efefef',
+        bg: '#202124',
+        fontColor: '#ababab',
         accent: '#ababab',
         border: '#3d3d3d',
         focus: '#adadad',
-        shadow: '#ffffff',
-        activeButton: '#eddeff'
+        shadow: '#00000059',
+        activeButton: '#eddeff',
     },
     contrast: '0',
-    sizes: {
-        borderWidth: '2px',
-        borderRadius: '8px'
-    },
-    media: {
-        mobile: '768px',
-    }
-}
+    sizes,
+    media,
+};

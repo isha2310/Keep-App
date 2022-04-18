@@ -1,19 +1,20 @@
 import styled from 'styled-components';
 
 export const Wrapper = styled.div`
-    height: calc(100vh - 2.5rem - 18px);
-    width: 5.8%;
+    height: calc(100vh - 3rem - 18px);
+    /* width:4.5rem; */
+    ${(props) => props.widths && `width: ${props.widths}rem`};
+    ${(props) => props.boxShadow && `box-shadow: 0px 11px 5px 5px ${props.theme.colors.shadow}`};
     transition: ease-in 0.2s width;
+    position: absolute;
+    z-index: 11;
     overflow: hidden;
+    background: ${(props) => props.theme.colors.bg};
     &:hover{
-        width: 20%;
-        border-right: 2px solid ${(props) => props.theme.colors.border};
-        box-shadow: 0px 0px 5px 5px ${(props) => props.theme.colors.border};
+        width: 14rem;
+        box-shadow: 0px 11px 5px 5px ${(props) => props.theme.colors.shadow};
     }
-    @media screen and (max-width: ${(props) => props.theme.media.mobile}){
-        width: 60%;
-    }
-`
+`;
 export const SideButton = styled.button`
     margin: 10px 15px;
     border: none;
@@ -38,24 +39,24 @@ export const SideButton = styled.button`
             color: #202020!important;
         }
     }
-`
+`;
 export const IconButton = styled.img`
-    height: 30px;
-    width: 30px;
+    height: 1.2rem;
+    width: 1.2rem;
     opacity: 0.6;
     border-radius: 50%;
     padding: 8px;
     border: 2px solid transparent;
-    filter: contrast(${(props) => props.theme.contrast });
+    filter: contrast(${(props) => props.theme.contrast});
     &:hover{
         opacity: 0.8;
     }
-`
+`;
 export const TextButton = styled.p`
-    color: ${(props) => props.theme.colors.fontColor }94;
-    font-size: 0.8rem;
+    color: ${(props) => props.theme.colors.fontColor}94;
+    font-size: 1rem;
     font-weight: 700;
     font-family: sans-serif;
     margin: 0;
     margin-left: 25px;
-`
+`;
